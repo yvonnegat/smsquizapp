@@ -1,0 +1,1802 @@
+[
+    {
+        "grade": "Grade 6",
+        "subject": "Math",
+        "question": "A rectangle has a length of 12 cm and a width of 8 cm. If the length is increased by 25%, what is the new area?",
+        "options": [
+            "A) 120 cm\u00b2",
+            "B) 130 cm\u00b2",
+            "C) 150 cm\u00b2",
+            "D) 160 cm\u00b2"
+        ],
+        "answer": "D"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Math",
+        "question": "A number is multiplied by 4 and then 7 is added to give 27. What is the number?",
+        "options": [
+            "A) 4",
+            "B) 5",
+            "C) 6",
+            "D) 7"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Math",
+        "question": "A bag contains 5 red balls and 3 blue balls. What is the probability of picking a blue ball?",
+        "options": [
+            "A) 1/8",
+            "B) 1/3",
+            "C) 3/8",
+            "D) 2/3"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Math",
+        "question": "The sum of three consecutive numbers is 72. What is the largest number?",
+        "options": [
+            "A) 23",
+            "B) 24",
+            "C) 25",
+            "D) 26"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Math",
+        "question": "A class has 30 students. 1/3 play football, 1/5 play basketball. How many play neither?",
+        "options": [
+            "A) 12",
+            "B) 18",
+            "C) 20",
+            "D) 22"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Math",
+        "question": "Solve: 2(x + 3) - 5 = 9. Find x.",
+        "options": [
+            "A) 4",
+            "B) 5",
+            "C) 6",
+            "D) 7"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Math",
+        "question": "The perimeter of a rectangle is 60 cm. If length = 2 \u00d7 width, find the width.",
+        "options": [
+            "A) 10",
+            "B) 12",
+            "C) 15",
+            "D) 20"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Math",
+        "question": "Simplify: 3/4 + 5/8",
+        "options": [
+            "A) 1 1/8",
+            "B) 1 1/4",
+            "C) 1 3/4",
+            "D) 2"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Math",
+        "question": "A shop sells pens at 15 KES each. A student buys 7 pens and pays 120 KES. How much change?",
+        "options": [
+            "A) 5",
+            "B) 15",
+            "C) 20",
+            "D) 25"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Math",
+        "question": "A triangle has angles measuring 50\u00b0, 60\u00b0, and x\u00b0. Find x.",
+        "options": [
+            "A) 60\u00b0",
+            "B) 70\u00b0",
+            "C) 80\u00b0",
+            "D) 90\u00b0"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Math",
+        "question": "Solve for x: 3x + 5 = 2x + 12",
+        "options": [
+            "A) 5",
+            "B) 7",
+            "C) 6",
+            "D) 8"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Math",
+        "question": "A train travels 150 km in 2 hours. Another leaves 1 hour later at 80 km/h. When will they meet?",
+        "options": [
+            "A) 3 hours after first train",
+            "B) 2 hours after first train",
+            "C) 4 hours after first train",
+            "D) 5 hours after first train"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Math",
+        "question": "Factorize: x\u00b2 + 7x + 12",
+        "options": [
+            "A) (x+3)(x+4)",
+            "B) (x+2)(x+6)",
+            "C) (x+1)(x+12)",
+            "D) (x+4)(x+4)"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Math",
+        "question": "The ratio of boys to girls is 5:4. If there are 45 boys, how many girls?",
+        "options": [
+            "A) 36",
+            "B) 40",
+            "C) 35",
+            "D) 30"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Math",
+        "question": "Solve: 2(x - 3) + 5 = 11",
+        "options": [
+            "A) 5",
+            "B) 6",
+            "C) 4",
+            "D) 7"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Science",
+        "question": "Which of these is NOT a state of matter?",
+        "options": [
+            "A) Solid",
+            "B) Liquid",
+            "C) Gas",
+            "D) Energy"
+        ],
+        "answer": "D"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Science",
+        "question": "Water boils at 100\u00b0C. At what temperature does it freeze?",
+        "options": [
+            "A) 0\u00b0C",
+            "B) -10\u00b0C",
+            "C) 32\u00b0C",
+            "D) -100\u00b0C"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Science",
+        "question": "Which organ pumps blood in the human body?",
+        "options": [
+            "A) Lung",
+            "B) Heart",
+            "C) Kidney",
+            "D) Liver"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Science",
+        "question": "Which gas do humans inhale to survive?",
+        "options": [
+            "A) Oxygen",
+            "B) Carbon dioxide",
+            "C) Nitrogen",
+            "D) Hydrogen"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Science",
+        "question": "The Sun is a source of?",
+        "options": [
+            "A) Light",
+            "B) Sound",
+            "C) Electricity",
+            "D) Magnetism"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Science",
+        "question": "Which organelle is called the powerhouse of the cell?",
+        "options": [
+            "A) Nucleus",
+            "B) Ribosome",
+            "C) Mitochondria",
+            "D) Chloroplast"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Science",
+        "question": "Water is a compound because it contains?",
+        "options": [
+            "A) Only hydrogen",
+            "B) Only oxygen",
+            "C) Hydrogen and oxygen",
+            "D) Nitrogen and oxygen"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Science",
+        "question": "Which system in humans is responsible for transporting nutrients?",
+        "options": [
+            "A) Circulatory",
+            "B) Nervous",
+            "C) Respiratory",
+            "D) Digestive"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Science",
+        "question": "Which type of energy is stored in food?",
+        "options": [
+            "A) Chemical",
+            "B) Thermal",
+            "C) Kinetic",
+            "D) Sound"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Science",
+        "question": "Which of the following is a renewable source of energy?",
+        "options": [
+            "A) Coal",
+            "B) Oil",
+            "C) Solar",
+            "D) Gas"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Science",
+        "question": "Which type of cell division produces gametes?",
+        "options": [
+            "A) Mitosis",
+            "B) Meiosis",
+            "C) Binary fission",
+            "D) Budding"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Science",
+        "question": "The formula H2SO4 represents which acid?",
+        "options": [
+            "A) Hydrochloric acid",
+            "B) Sulfuric acid",
+            "C) Nitric acid",
+            "D) Acetic acid"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Science",
+        "question": "Which planet is known as the Red Planet?",
+        "options": [
+            "A) Venus",
+            "B) Mars",
+            "C) Jupiter",
+            "D) Saturn"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Science",
+        "question": "What is the main gas responsible for global warming?",
+        "options": [
+            "A) Oxygen",
+            "B) Carbon dioxide",
+            "C) Nitrogen",
+            "D) Helium"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Science",
+        "question": "Which element has the atomic number 6?",
+        "options": [
+            "A) Carbon",
+            "B) Oxygen",
+            "C) Nitrogen",
+            "D) Hydrogen"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "English",
+        "question": "Choose the correct synonym for 'happy':",
+        "options": [
+            "A) Sad",
+            "B) Joyful",
+            "C) Angry",
+            "D) Tired"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "English",
+        "question": "Which of these is a noun?",
+        "options": [
+            "A) Run",
+            "B) Apple",
+            "C) Quickly",
+            "D) Blue"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "English",
+        "question": "Identify the verb in the sentence: 'The dog barked loudly.'",
+        "options": [
+            "A) Dog",
+            "B) Barked",
+            "C) Loudly",
+            "D) The"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "English",
+        "question": "Choose the correct spelling:",
+        "options": [
+            "A) Recieve",
+            "B) Receive",
+            "C) Recive",
+            "D) Receve"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "English",
+        "question": "Fill in the blank: 'She ___ to school every day.'",
+        "options": [
+            "A) Go",
+            "B) Goes",
+            "C) Went",
+            "D) Going"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "English",
+        "question": "Identify the figurative language: 'He was as brave as a lion.'",
+        "options": [
+            "A) Simile",
+            "B) Metaphor",
+            "C) Personification",
+            "D) Hyperbole"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "English",
+        "question": "Choose the correct tense: 'They ___ finished their homework.'",
+        "options": [
+            "A) Have",
+            "B) Has",
+            "C) Had",
+            "D) Having"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "English",
+        "question": "Select the correct homophone: 'I need to ___ a letter.'",
+        "options": [
+            "A) Write",
+            "B) Right",
+            "C) Rite",
+            "D) Wright"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "English",
+        "question": "Which is a complex sentence?",
+        "options": [
+            "A) I went home.",
+            "B) I went home because it was raining.",
+            "C) Go to school!",
+            "D) He is tall."
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "English",
+        "question": "Choose the antonym of 'generous':",
+        "options": [
+            "A) Kind",
+            "B) Selfish",
+            "C) Giving",
+            "D) Helpful"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "English",
+        "question": "Identify the passive voice: 'The book was read by the student.'",
+        "options": [
+            "A) Active",
+            "B) Passive",
+            "C) Both",
+            "D) Neither"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "English",
+        "question": "Choose the correct punctuation: 'Its a beautiful day outside!'",
+        "options": [
+            "A) It's a beautiful day outside!",
+            "B) Its a beautiful day outside.",
+            "C) Its a beautiful day outside!",
+            "D) Its, a beautiful day outside!"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "English",
+        "question": "Select the correct word: 'He has a good ___ of humor.'",
+        "options": [
+            "A) Sense",
+            "B) Senseful",
+            "C) Sensible",
+            "D) Sensory"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "English",
+        "question": "Identify the literary device: 'The wind whispered through the trees.'",
+        "options": [
+            "A) Simile",
+            "B) Metaphor",
+            "C) Personification",
+            "D) Hyperbole"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "English",
+        "question": "Which sentence uses correct subject-verb agreement?",
+        "options": [
+            "A) The dogs runs fast.",
+            "B) The dog run fast.",
+            "C) The dog runs fast.",
+            "D) The dogs running fast."
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Kiswahili",
+        "question": "Chagua maana sahihi ya neno 'furaha':",
+        "options": [
+            "A) Huzuni",
+            "B) Sherehe",
+            "C) Huzuni na furaha",
+            "D) Furaha"
+        ],
+        "answer": "D"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Kiswahili",
+        "question": "Andika kielezi sahihi: 'Rafiki yangu anakimbia ___ haraka.'",
+        "options": [
+            "A) Sana",
+            "B) Haraka",
+            "C) Pole",
+            "D) Hapo"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Kiswahili",
+        "question": "Neno 'kitabu' ni kipi?",
+        "options": [
+            "A) Kielezi",
+            "B) Nomino",
+            "C) Kitenzi",
+            "D) Kiunganishi"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Kiswahili",
+        "question": "Chagua kitenzi sahihi: 'Watoto ___ sokoni kila Jumamosi.'",
+        "options": [
+            "A) Nenda",
+            "B) Nenda",
+            "C) Huwenda",
+            "D) Kwenda"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Kiswahili",
+        "question": "Neno 'shule' linahusiana na:",
+        "options": [
+            "A) Afya",
+            "B) Elimu",
+            "C) Chakula",
+            "D) Michezo"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Kiswahili",
+        "question": "Chagua kifungu cha methali kilichosahihi: 'Asiyefanya ...'",
+        "options": [
+            "A) Hafai",
+            "B) Hakosei",
+            "C) Hakushindwa",
+            "D) Haendi mbali"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Kiswahili",
+        "question": "Tambua kitenzi katika sentensi: 'Aliandika barua kwa mwalimu.'",
+        "options": [
+            "A) Aliandika",
+            "B) Barua",
+            "C) Mwalimu",
+            "D) Kwa"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Kiswahili",
+        "question": "Chagua kielezi sahihi: 'Ninafurahi sana kwa sababu ...'",
+        "options": [
+            "A) nimepata alama nzuri",
+            "B) nilipoteza kitabu",
+            "C) nimesahau somo",
+            "D) ninalala"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Kiswahili",
+        "question": "Methali: 'Akili ni mali.' Hii inamaanisha?",
+        "options": [
+            "A) Akili si muhimu",
+            "B) Akili ni zawadi",
+            "C) Akili ni mali ya thamani",
+            "D) Akili ni urithi"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Kiswahili",
+        "question": "Tafsiri maneno: 'Mvuvi mzee.'",
+        "options": [
+            "A) Young fisherman",
+            "B) Old fisherman",
+            "C) Experienced fisherman",
+            "D) Skilled fisherman"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Kiswahili",
+        "question": "Chagua kielezo sahihi: 'Wanafunzi ___ waliosoma vizuri watashinda.'",
+        "options": [
+            "A) wote",
+            "B) baadhi",
+            "C) wachache",
+            "D) wote wenye bidii"
+        ],
+        "answer": "D"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Kiswahili",
+        "question": "Tambua aina ya methali: 'Bahati ya mwenzio usiyomchukulia.'",
+        "options": [
+            "A) Methali ya hila",
+            "B) Methali ya hekima",
+            "C) Methali ya mafunzo",
+            "D) Methali ya utani"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Kiswahili",
+        "question": "Chagua kitenzi sahihi: 'Wazazi wanapenda watoto wao.'",
+        "options": [
+            "A) Wanapenda",
+            "B) Wazazi",
+            "C) Watoto",
+            "D) Wao"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Kiswahili",
+        "question": "Neno 'taarifa' linamaanisha:",
+        "options": [
+            "A) News / information",
+            "B) Story",
+            "C) Letter",
+            "D) Article"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Kiswahili",
+        "question": "Chagua usemi sahihi: 'Alienda sokoni kwa ajili ya ...'",
+        "options": [
+            "A) Kununua vyakula",
+            "B) Kusalimia",
+            "C) Kusoma",
+            "D) Kukimbia"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Social Studies",
+        "question": "Which of the following is a natural resource?",
+        "options": [
+            "A) Plastic",
+            "B) Iron ore",
+            "C) Paper",
+            "D) Glass"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Social Studies",
+        "question": "Which type of map shows mountains and valleys?",
+        "options": [
+            "A) Political map",
+            "B) Physical map",
+            "C) Climate map",
+            "D) Road map"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Social Studies",
+        "question": "The main economic activity in rural Kenya is:",
+        "options": [
+            "A) Fishing",
+            "B) Mining",
+            "C) Agriculture",
+            "D) Tourism"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Social Studies",
+        "question": "Which continent is Kenya located in?",
+        "options": [
+            "A) Asia",
+            "B) Africa",
+            "C) Europe",
+            "D) Australia"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Social Studies",
+        "question": "Nairobi is the ____ of Kenya.",
+        "options": [
+            "A) Capital city",
+            "B) Largest county",
+            "C) National park",
+            "D) River"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Social Studies",
+        "question": "Who was the first President of Kenya?",
+        "options": [
+            "A) Jomo Kenyatta",
+            "B) Daniel arap Moi",
+            "C) Mwai Kibaki",
+            "D) Uhuru Kenyatta"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Social Studies",
+        "question": "The process by which people move from rural to urban areas is called:",
+        "options": [
+            "A) Urbanization",
+            "B) Migration",
+            "C) Immigration",
+            "D) Colonization"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Social Studies",
+        "question": "Which river is the longest in Kenya?",
+        "options": [
+            "A) Tana",
+            "B) Athi",
+            "C) Ewaso Ng\u2019iro",
+            "D) Mara"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Social Studies",
+        "question": "Kenya gained independence in which year?",
+        "options": [
+            "A) 1960",
+            "B) 1963",
+            "C) 1965",
+            "D) 1970"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Social Studies",
+        "question": "The main purpose of the Constitution is to:",
+        "options": [
+            "A) Make laws",
+            "B) Protect citizens' rights",
+            "C) Collect taxes",
+            "D) Run schools"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Social Studies",
+        "question": "Which of these was a major factor in the scramble for Africa?",
+        "options": [
+            "A) Colonization",
+            "B) Industrial Revolution",
+            "C) World War I",
+            "D) Slave trade"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Social Studies",
+        "question": "The Mau Mau uprising occurred mainly in which region?",
+        "options": [
+            "A) Coast",
+            "B) Central Kenya",
+            "C) Rift Valley",
+            "D) Nyanza"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Social Studies",
+        "question": "Which international body promotes world peace and security?",
+        "options": [
+            "A) NATO",
+            "B) UN",
+            "C) AU",
+            "D) IMF"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Social Studies",
+        "question": "What is the term for the right to vote in elections?",
+        "options": [
+            "A) Suffrage",
+            "B) Democracy",
+            "C) Representation",
+            "D) Freedom"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Social Studies",
+        "question": "Which economic system is based on private ownership and profit-making?",
+        "options": [
+            "A) Socialism",
+            "B) Communism",
+            "C) Capitalism",
+            "D) Feudalism"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "ICT",
+        "question": "Which device is used to input data into a computer?",
+        "options": [
+            "A) Monitor",
+            "B) Keyboard",
+            "C) Printer",
+            "D) Speaker"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "ICT",
+        "question": "Which of these is an output device?",
+        "options": [
+            "A) Mouse",
+            "B) Keyboard",
+            "C) Printer",
+            "D) Scanner"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "ICT",
+        "question": "What does CPU stand for?",
+        "options": [
+            "A) Central Processing Unit",
+            "B) Computer Power Unit",
+            "C) Central Print Unit",
+            "D) Control Processing Unit"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "ICT",
+        "question": "Which of these is NOT a computer software?",
+        "options": [
+            "A) Word Processor",
+            "B) Spreadsheet",
+            "C) Keyboard",
+            "D) Web Browser"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "ICT",
+        "question": "Which device is used to display information on the screen?",
+        "options": [
+            "A) Monitor",
+            "B) Mouse",
+            "C) Keyboard",
+            "D) Printer"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "ICT",
+        "question": "What is the primary function of an operating system?",
+        "options": [
+            "A) Manage hardware and software",
+            "B) Create documents",
+            "C) Browse the web",
+            "D) Print files"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "ICT",
+        "question": "Which of the following is a storage device?",
+        "options": [
+            "A) Keyboard",
+            "B) Mouse",
+            "C) Hard Disk",
+            "D) Monitor"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "ICT",
+        "question": "Which type of software is used to create presentations?",
+        "options": [
+            "A) Word Processor",
+            "B) Spreadsheet",
+            "C) Presentation software",
+            "D) Database software"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "ICT",
+        "question": "Which of the following is an example of a web browser?",
+        "options": [
+            "A) Microsoft Word",
+            "B) Google Chrome",
+            "C) Excel",
+            "D) Paint"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "ICT",
+        "question": "Which network connects computers in a small area like a school?",
+        "options": [
+            "A) LAN",
+            "B) WAN",
+            "C) Internet",
+            "D) VPN"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "ICT",
+        "question": "Which of the following is a programming language?",
+        "options": [
+            "A) HTML",
+            "B) Python",
+            "C) CSS",
+            "D) Excel"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "ICT",
+        "question": "Which of the following is used to secure a computer network?",
+        "options": [
+            "A) Firewall",
+            "B) Monitor",
+            "C) Printer",
+            "D) Keyboard"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "ICT",
+        "question": "Which protocol is used to transfer web pages over the Internet?",
+        "options": [
+            "A) HTTP",
+            "B) FTP",
+            "C) SMTP",
+            "D) DNS"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "ICT",
+        "question": "Which type of memory is volatile and loses data when power is off?",
+        "options": [
+            "A) ROM",
+            "B) RAM",
+            "C) Hard Disk",
+            "D) SSD"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "ICT",
+        "question": "Which of these is used to uniquely identify a computer on a network?",
+        "options": [
+            "A) IP Address",
+            "B) MAC Address",
+            "C) URL",
+            "D) Domain Name"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Arts and Design",
+        "question": "Which of the following is a primary color?",
+        "options": [
+            "A) Green",
+            "B) Blue",
+            "C) Purple",
+            "D) Orange"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Arts and Design",
+        "question": "Which tool is commonly used for drawing lines?",
+        "options": [
+            "A) Brush",
+            "B) Pencil",
+            "C) Palette",
+            "D) Easel"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Arts and Design",
+        "question": "What is the process of mixing colors to create new colors called?",
+        "options": [
+            "A) Shading",
+            "B) Blending",
+            "C) Painting",
+            "D) Sketching"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Arts and Design",
+        "question": "Which of these is a 2D shape?",
+        "options": [
+            "A) Cube",
+            "B) Triangle",
+            "C) Sphere",
+            "D) Cylinder"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Arts and Design",
+        "question": "Which medium is used for painting on paper?",
+        "options": [
+            "A) Oil paints",
+            "B) Watercolors",
+            "C) Acrylic on canvas",
+            "D) Charcoal on wood"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Arts and Design",
+        "question": "Which principle of design refers to the lightness or darkness of a color?",
+        "options": [
+            "A) Contrast",
+            "B) Balance",
+            "C) Value",
+            "D) Unity"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Arts and Design",
+        "question": "In sculpture, which tool is used to shape clay?",
+        "options": [
+            "A) Chisel",
+            "B) Modeling tools",
+            "C) Paintbrush",
+            "D) Palette knife"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Arts and Design",
+        "question": "Which of the following is a complementary color to blue?",
+        "options": [
+            "A) Red",
+            "B) Yellow",
+            "C) Orange",
+            "D) Green"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Arts and Design",
+        "question": "What is the term for creating depth in a drawing?",
+        "options": [
+            "A) Perspective",
+            "B) Proportion",
+            "C) Texture",
+            "D) Pattern"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Arts and Design",
+        "question": "Which art movement is characterized by bright colors and visible brush strokes?",
+        "options": [
+            "A) Impressionism",
+            "B) Cubism",
+            "C) Surrealism",
+            "D) Realism"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Arts and Design",
+        "question": "Which principle of design emphasizes elements that stand out to attract attention?",
+        "options": [
+            "A) Emphasis",
+            "B) Balance",
+            "C) Harmony",
+            "D) Unity"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Arts and Design",
+        "question": "Which technique is used to create shading with small dots?",
+        "options": [
+            "A) Hatching",
+            "B) Stippling",
+            "C) Blending",
+            "D) Cross-hatching"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Arts and Design",
+        "question": "Which medium is permanent and ideal for wall murals?",
+        "options": [
+            "A) Watercolors",
+            "B) Acrylic paint",
+            "C) Pastels",
+            "D) Pencil"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Arts and Design",
+        "question": "In design, 'proportion' refers to:",
+        "options": [
+            "A) Size relationship between elements",
+            "B) Color harmony",
+            "C) Repetition of shapes",
+            "D) Texture"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Arts and Design",
+        "question": "Which of the following is a 3D art form?",
+        "options": [
+            "A) Painting",
+            "B) Sculpture",
+            "C) Drawing",
+            "D) Printmaking"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Business Studies",
+        "question": "Which of the following is a type of business ownership?",
+        "options": [
+            "A) Sole proprietorship",
+            "B) Friendship",
+            "C) Community club",
+            "D) School committee"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Business Studies",
+        "question": "Which activity involves buying goods to sell at a profit?",
+        "options": [
+            "A) Production",
+            "B) Trade",
+            "C) Advertising",
+            "D) Saving"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Business Studies",
+        "question": "Money received from selling goods or services is called:",
+        "options": [
+            "A) Profit",
+            "B) Revenue",
+            "C) Expense",
+            "D) Capital"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Business Studies",
+        "question": "Which of these is an example of a service business?",
+        "options": [
+            "A) Bakery",
+            "B) Hair salon",
+            "C) Farm",
+            "D) Supermarket"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Business Studies",
+        "question": "The money used to start a business is called:",
+        "options": [
+            "A) Revenue",
+            "B) Capital",
+            "C) Profit",
+            "D) Debt"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Business Studies",
+        "question": "Which of the following is a long-term source of business finance?",
+        "options": [
+            "A) Bank loan",
+            "B) Savings",
+            "C) Issuing shares",
+            "D) Cash sales"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Business Studies",
+        "question": "A business plan is important because it:",
+        "options": [
+            "A) Attracts customers",
+            "B) Guides business operations",
+            "C) Replaces employees",
+            "D) Avoids taxes"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Business Studies",
+        "question": "Which of the following is a marketing activity?",
+        "options": [
+            "A) Production",
+            "B) Selling goods",
+            "C) Buying machines",
+            "D) Paying salaries"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Business Studies",
+        "question": "Profit is calculated by subtracting ____ from revenue.",
+        "options": [
+            "A) Capital",
+            "B) Expenses",
+            "C) Savings",
+            "D) Assets"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Business Studies",
+        "question": "Which of the following is a feature of an entrepreneur?",
+        "options": [
+            "A) Laziness",
+            "B) Creativity",
+            "C) Dependence",
+            "D) Carelessness"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Business Studies",
+        "question": "What is the primary goal of a business?",
+        "options": [
+            "A) Provide jobs",
+            "B) Make profit",
+            "C) Educate people",
+            "D) Entertain customers"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Business Studies",
+        "question": "Which of the following is an internal source of business finance?",
+        "options": [
+            "A) Share capital",
+            "B) Bank loan",
+            "C) Retained earnings",
+            "D) Grant"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Business Studies",
+        "question": "Which type of business combines resources from two or more owners?",
+        "options": [
+            "A) Sole proprietorship",
+            "B) Partnership",
+            "C) Cooperative",
+            "D) Franchise"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Business Studies",
+        "question": "Which of the following is an example of a fixed cost?",
+        "options": [
+            "A) Rent",
+            "B) Raw materials",
+            "C) Wages",
+            "D) Commission"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Business Studies",
+        "question": "Market research helps businesses to:",
+        "options": [
+            "A) Make informed decisions",
+            "B) Avoid paying taxes",
+            "C) Increase debts",
+            "D) Hire unqualified staff"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Agriculture",
+        "question": "Which of the following is a crop grown for food?",
+        "options": [
+            "A) Maize",
+            "B) Rose",
+            "C) Mango seed",
+            "D) Aloe vera"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Agriculture",
+        "question": "Which tool is used for digging soil?",
+        "options": [
+            "A) Hoe",
+            "B) Rake",
+            "C) Spade",
+            "D) Sickle"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Agriculture",
+        "question": "Which of these animals is a source of milk?",
+        "options": [
+            "A) Cow",
+            "B) Chicken",
+            "C) Pig",
+            "D) Goatweed"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Agriculture",
+        "question": "What is the process of preparing soil for planting called?",
+        "options": [
+            "A) Irrigation",
+            "B) Ploughing",
+            "C) Harvesting",
+            "D) Threshing"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Agriculture",
+        "question": "Which part of the plant absorbs water and nutrients?",
+        "options": [
+            "A) Leaves",
+            "B) Stem",
+            "C) Roots",
+            "D) Flowers"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Agriculture",
+        "question": "Which type of soil is best for crop growth?",
+        "options": [
+            "A) Sandy soil",
+            "B) Clay soil",
+            "C) Loamy soil",
+            "D) Rocky soil"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Agriculture",
+        "question": "Which method of irrigation uses pipes and sprinklers?",
+        "options": [
+            "A) Drip irrigation",
+            "B) Flood irrigation",
+            "C) Sprinkler irrigation",
+            "D) Manual watering"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Agriculture",
+        "question": "Which of the following is a nitrogen-fixing crop?",
+        "options": [
+            "A) Beans",
+            "B) Maize",
+            "C) Wheat",
+            "D) Cassava"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Agriculture",
+        "question": "Which practice helps prevent soil erosion?",
+        "options": [
+            "A) Overgrazing",
+            "B) Terracing",
+            "C) Deforestation",
+            "D) Monocropping"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Agriculture",
+        "question": "Which crop is commonly grown for export in Kenya?",
+        "options": [
+            "A) Tea",
+            "B) Maize",
+            "C) Cassava",
+            "D) Spinach"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Agriculture",
+        "question": "Which farming system combines crops and livestock on the same farm?",
+        "options": [
+            "A) Mixed farming",
+            "B) Mono-cropping",
+            "C) Pastoral farming",
+            "D) Plantation farming"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Agriculture",
+        "question": "Which type of fertilizer provides immediate nutrients to plants?",
+        "options": [
+            "A) Organic fertilizer",
+            "B) Inorganic fertilizer",
+            "C) Compost",
+            "D) Manure"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Agriculture",
+        "question": "Which disease affects maize and causes leaf streaks?",
+        "options": [
+            "A) Maize streak virus",
+            "B) Rust",
+            "C) Blight",
+            "D) Smut"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Agriculture",
+        "question": "Which method is used to control pests naturally without chemicals?",
+        "options": [
+            "A) Crop rotation",
+            "B) Biological control",
+            "C) Pesticides",
+            "D) Burning crops"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Agriculture",
+        "question": "Which practice improves soil fertility naturally?",
+        "options": [
+            "A) Monocropping",
+            "B) Crop rotation",
+            "C) Overgrazing",
+            "D) Deforestation"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Life Skills / Health Education",
+        "question": "Which of the following is the most balanced meal for a child?",
+        "options": [
+            "A) Ugali, sukuma wiki, and fish",
+            "B) Rice with fried chicken and soda",
+            "C) Chapati with sugar tea",
+            "D) Bread with margarine and juice"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Life Skills / Health Education",
+        "question": "Which practice is most effective in preventing the spread of germs?",
+        "options": [
+            "A) Washing hands before meals",
+            "B) Sneezing into your sleeve occasionally",
+            "C) Using the same towel as friends",
+            "D) Rinsing hands with water only"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Life Skills / Health Education",
+        "question": "How many hours of sleep does a child aged 10\u201312 need daily?",
+        "options": [
+            "A) 6\u20137 hours",
+            "B) 7\u20138 hours",
+            "C) 8\u201310 hours",
+            "D) 10\u201312 hours"
+        ],
+        "answer": "C"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Life Skills / Health Education",
+        "question": "Which activity best supports mental well-being in children?",
+        "options": [
+            "A) Playing outdoor games with friends",
+            "B) Watching TV for several hours",
+            "C) Sleeping less to finish homework",
+            "D) Avoiding social interaction"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 6",
+        "subject": "Life Skills / Health Education",
+        "question": "Which of the following is an example of good hygiene?",
+        "options": [
+            "A) Brushing teeth twice a day",
+            "B) Wearing the same clothes for 3 days",
+            "C) Sharing combs with friends",
+            "D) Skipping bathing once a week"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Life Skills / Health Education",
+        "question": "Which nutrient is most important for building and repairing muscles?",
+        "options": [
+            "A) Proteins",
+            "B) Carbohydrates",
+            "C) Fats",
+            "D) Minerals"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Life Skills / Health Education",
+        "question": "How much water should an adolescent ideally drink per day?",
+        "options": [
+            "A) 1\u20132 liters",
+            "B) 2\u20133 liters",
+            "C) 3\u20134 liters",
+            "D) 4\u20135 liters"
+        ],
+        "answer": "B"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Life Skills / Health Education",
+        "question": "Which habit reduces the risk of communicable diseases?",
+        "options": [
+            "A) Receiving recommended vaccinations",
+            "B) Sharing eating utensils often",
+            "C) Avoiding exercise",
+            "D) Sleeping in crowded rooms"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Life Skills / Health Education",
+        "question": "Which activity is most effective in managing stress?",
+        "options": [
+            "A) Exercising and talking to friends",
+            "B) Ignoring problems and isolating yourself",
+            "C) Overeating sweets",
+            "D) Watching TV for long periods"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 8",
+        "subject": "Life Skills / Health Education",
+        "question": "Which practice improves mental health and focus?",
+        "options": [
+            "A) Journaling and reflecting",
+            "B) Staying up late without rest",
+            "C) Ignoring problems",
+            "D) Avoiding social interaction"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Life Skills / Health Education",
+        "question": "Which factor has the greatest impact on personal hygiene?",
+        "options": [
+            "A) Access to clean water and sanitation",
+            "B) Watching TV regularly",
+            "C) Staying up late",
+            "D) Eating snacks between meals"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Life Skills / Health Education",
+        "question": "Which of the following is classified as a mental health disorder?",
+        "options": [
+            "A) Depression",
+            "B) Malaria",
+            "C) Diabetes",
+            "D) Asthma"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Life Skills / Health Education",
+        "question": "Which habit helps prevent lifestyle diseases?",
+        "options": [
+            "A) Eating balanced meals and exercising regularly",
+            "B) Smoking occasionally",
+            "C) Eating fast food daily",
+            "D) Avoiding physical activity"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Life Skills / Health Education",
+        "question": "Which practice promotes sexual and reproductive health in adolescents?",
+        "options": [
+            "A) Seeking accurate information and guidance",
+            "B) Following peer pressure blindly",
+            "C) Ignoring health education classes",
+            "D) Skipping medical checkups"
+        ],
+        "answer": "A"
+    },
+    {
+        "grade": "Grade 10",
+        "subject": "Life Skills / Health Education",
+        "question": "Which strategy is effective in preventing substance abuse among teens?",
+        "options": [
+            "A) Awareness and counseling programs",
+            "B) Isolation from family and friends",
+            "C) Peer pressure",
+            "D) Ignoring consequences"
+        ],
+        "answer": "A"
+    }
+]

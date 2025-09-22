@@ -1,0 +1,33 @@
+{
+  "+254700123456": {
+    "phone": "+254700123456",
+    "name": "Alice",
+    "grade": "Grade8",
+    "subjects": [
+      "MATH",
+      "ENG"
+    ],
+    "registeredAt": "2025-09-22T19:05:19.238Z"
+  },
+  "+254710123456": {
+    "phone": "+254710123456",
+    "name": "Ali",
+    "grade": "Grade9",
+    "subjects": [
+      "MATH",
+      "Sci"
+    ],
+    "registeredAt": "2025-09-22T19:08:24.800Z"
+  },
+  "+25470134564": {
+    "phone": "+25470134564",
+    "name": "JAMES",
+    "grade": "Grade15",
+    "subjects": [
+      "CYBERSEC",
+      "BIO",
+      "PHY"
+    ],
+    "registeredAt": "2025-09-22T19:17:25.168Z"
+  }
+}

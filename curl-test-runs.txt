@@ -9,3 +9,19 @@ Invoke-RestMethod `
   }
 
 // Above is to force receiving a message from africastalking
+
+Sending airtime below
+
+Invoke-RestMethod `
+  -Uri "https://api.sandbox.africastalking.com/version1/airtime/send" `
+  -Method Post `
+  -Headers @{ "apikey" = "atsk_e881fe84ab37c3bc0e1c64acdf16bab820b262a22d43fbb9a3219633c8db7b56530ff8e0" } `
+  -ContentType "application/x-www-form-urlencoded" `
+  -Body "username=sandbox&recipients[0][phoneNumber]=+254732323032&recipients[0][currencyCode]=KES&recipients[0][amount]=10"
+
+Invoke-RestMethod `
+  -Uri "https://api.sandbox.africastalking.com/version1/airtime/send" `
+  -Method Post `
+  -Headers @{ "apikey" = "atsk_e881fe84ab37c3bc0e1c64acdf16bab820b262a22d43fbb9a3219633c8db7b56530ff8e0" } `
+  -ContentType "application/json" `
+  -Body ('{ "username":"sandbox", "recipients":[{"phoneNumber":"+254120000000","currencyCode":"KES","amount":"10"}] }')

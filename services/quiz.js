@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 const { readUsers, saveUsers } = require('../helpers/storage');
-const { AVAILABLE_SUBJECTS } = require('./registration');
 
 const QUESTIONS_FILE = path.join(__dirname, '..', 'data', 'questions.json');
 
@@ -20,28 +19,17 @@ function getNextQuestion(phone) {
   if (!user) return null;
 
   const questions = loadQuestions().filter(
-    q =>
-      normalize(q.grade) === normalize(user.grade) &&
-      user.subjects.some(s => normalize(q.subject) === normalize(s))
+    q => normalize(q.grade) === normalize(user.grade)
   );
 
   if (!questions.length) {
-    return {
-      finished: true,
-      text:
-        'Sorry, no more questions found for your chosen subjects.\nAvailable subjects are:\n' +
-        AVAILABLE_SUBJECTS.join(', ')
-    };
+    console.log('[DEBUG] No questions found for grade:', user.grade);
+    return null;
   }
 
   const nextIndex = user.lastIndex + 1;
   if (nextIndex >= questions.length) {
-    return {
-      finished: true,
-      text:
-        '🎉 You have completed all questions for your subject(s).\nAvailable subjects are:\n' +
-        AVAILABLE_SUBJECTS.join(', ')
-    };
+    return { finished: true, text: '🎉 You have completed all questions for your grade!' };
   }
 
   const q = questions[nextIndex];
@@ -50,13 +38,12 @@ function getNextQuestion(phone) {
   user.lastIndex = nextIndex;
   saveUsers(users);
 
-  console.log('[DEBUG] Sending', q.subject, 'question index', nextIndex, 'to', phone);
-
+  console.log('[DEBUG] Sending question index', nextIndex, 'to', phone);
   return { question: q, text: formatQuestion(q) };
 }
 
 function formatQuestion(q) {
-  return `${q.subject} (${q.grade})\n\n${q.question}\n\n${q.options.join('\n')}\n\nReply with A, B, C or D.`;
+  return `Q: ${q.question}\n\n${q.options.join('\n')}\n\nReply with A, B, C or D.`;
 }
 
 function checkAnswer(phone, answer) {
@@ -74,10 +61,7 @@ function checkAnswer(phone, answer) {
     return { correct: true, message: `✅ Correct! You now have ${user.points} points.` };
   } else {
     saveUsers(users);
-    return {
-      correct: false,
-      message: `❌ Wrong. The correct answer was ${user.lastQuestion.answer}. Total points: ${user.points}`
-    };
+    return { correct: false, message: `❌ Wrong. The correct answer was ${user.lastQuestion.answer}. Total points: ${user.points}` };
   }
 }
 

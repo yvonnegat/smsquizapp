@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 const smsRoutes = require('./routes/sms');
 const adminRoutes = require('./routes/admin');
+const airtimeRoutes = require('./routes/airtime');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,5 +18,6 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => res.send('Hello, SMS Quiz!'));
 app.use('/sms', smsRoutes);
 app.use('/admin', adminRoutes);
+app.use('/airtime', airtimeRoutes);
 
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

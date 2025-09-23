@@ -1,3 +1,5 @@
+// services/quiz.js
+
 const path = require('path');
 const fs = require('fs');
 const { readUsers, saveUsers } = require('../helpers/storage');
@@ -10,7 +12,17 @@ function loadQuestions() {
 }
 
 function normalize(str) {
-  return str.toLowerCase().replace(/\s+/g, '');
+  return (str || '').toLowerCase().replace(/\s+/g, '');
+}
+
+// Fisher-Yates shuffle
+function shuffle(array) {
+  const a = array.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 function getNextQuestion(phone) {
@@ -18,32 +30,57 @@ function getNextQuestion(phone) {
   const user = users[phone];
   if (!user) return null;
 
-  const questions = loadQuestions().filter(
-    q => normalize(q.grade) === normalize(user.grade)
+  const allQuestions = loadQuestions();
+
+  // Filter by grade AND subject(s)
+  const eligible = allQuestions.filter(q =>
+    normalize(q.grade) === normalize(user.grade)
+    && user.subjects.some(s => normalize(q.subject) === normalize(s))
   );
 
-  if (!questions.length) {
-    console.log('[DEBUG] No questions found for grade:', user.grade);
-    return null;
+  if (!eligible.length) {
+    console.log('[DEBUG] No eligible questions for user:', phone, 'grade:', user.grade, 'subjects:', user.subjects);
+    return {
+      finished: true,
+      text: 'Sorry, no questions found for your chosen subject(s) and grade. 🎓'
+    };
   }
 
-  const nextIndex = user.lastIndex + 1;
-  if (nextIndex >= questions.length) {
-    return { finished: true, text: '🎉 You have completed all questions for your grade!' };
+  // Initialize askedQuestions if not there
+  user.askedQuestions = user.askedQuestions || [];
+
+  // Filter out already asked
+  const notAsked = eligible.filter(q => !user.askedQuestions.includes(q.question));
+
+  let nextQ;
+  if (notAsked.length > 0) {
+    // Shuffle notAsked so it's random
+    const shuffled = shuffle(notAsked);
+    nextQ = shuffled[0];
+  } else {
+    // All questions asked, optionally reset or finish
+    // Here we'll treat as finished
+    return {
+      finished: true,
+      text: '🎉 You have completed all questions for your chosen subject(s).'
+    };
   }
 
-  const q = questions[nextIndex];
+  // Mark it as asked
+  user.askedQuestions.push(nextQ.question);
 
-  user.lastQuestion = q;
-  user.lastIndex = nextIndex;
+  // Also update lastQuestion, etc.
+  user.lastQuestion = nextQ;
+  // lastIndex might not matter now, but you could track
   saveUsers(users);
 
-  console.log('[DEBUG] Sending question index', nextIndex, 'to', phone);
-  return { question: q, text: formatQuestion(q) };
+  console.log('[DEBUG] Next question chosen for', phone, 'subject:', nextQ.subject);
+
+  return { question: nextQ, text: formatQuestion(nextQ) };
 }
 
 function formatQuestion(q) {
-  return `Q: ${q.question}\n\n${q.options.join('\n')}\n\nReply with A, B, C or D.`;
+  return `${q.subject} (${q.grade})\n\n${q.question}\n\n${q.options.join('\n')}\n\nReply with A, B, C or D.`;
 }
 
 function checkAnswer(phone, answer) {

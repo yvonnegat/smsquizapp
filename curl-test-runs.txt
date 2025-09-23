@@ -4,7 +4,7 @@ Invoke-RestMethod `
   -Headers @{ "apikey" = "atsk_e881fe84ab37c3bc0e1c64acdf16bab820b262a22d43fbb9a3219633c8db7b56530ff8e0" } `
   -Body @{
     username = "sandbox"
-    to       = "+254700123456"   # replace with your test number in sandbox
+    to       = "+254700123456"
     message  = "Hello from AT Sandbox"
   }
 

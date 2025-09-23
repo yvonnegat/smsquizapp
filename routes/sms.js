@@ -5,6 +5,7 @@ const sendSms = require('../helpers/sms');
 const { readUsers } = require('../helpers/storage');
 const { startRegistration, completeRegistration } = require('../services/registration');
 const { getNextQuestion, checkAnswer } = require('../services/quiz');
+const { getLeaderboard, getUserRank } = require('../services/leaderboard');
 
 router.post('/incoming', async (req, res) => {
   res.status(200).send(''); // ack quickly
@@ -15,6 +16,25 @@ router.post('/incoming', async (req, res) => {
 
   const users = readUsers();
   const user = users[from];
+
+  // --- LEADERBOARD / SCORE ---
+  if (/^(SCORE|RANK)$/i.test(text)) {
+    const rankInfo = getUserRank(from);
+    if (!rankInfo) {
+      await sendSms(from, 'You are not registered. Send JOIN to start.');
+      return;
+    }
+
+    const leaderboard = getLeaderboard(5);
+    let msg = `🏆 Leaderboard:\n`;
+    leaderboard.forEach((u, i) => {
+      msg += `${i + 1}. ${u.name} - ${u.points || 0} pts\n`;
+    });
+
+    msg += `\nYour Rank: ${rankInfo.rank}/${rankInfo.total} (${rankInfo.user.points} pts)`;
+    await sendSms(from, msg);
+    return;
+  }
 
   // --- REGISTRATION FLOW ---
   if (/^JOIN$/i.test(text)) {

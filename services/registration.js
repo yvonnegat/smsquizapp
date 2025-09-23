@@ -1,5 +1,18 @@
 const { readUsers, saveUsers } = require('../helpers/storage');
 
+const AVAILABLE_SUBJECTS = [
+  "Mathematics",
+  "Science",
+  "English",
+  "Kiswahili",
+  "Social Studies",
+  "ICT",
+  "Arts & Design",
+  "Business Studies",
+  "Agriculture",
+  "Life Skills / Health Education"
+];
+
 function startRegistration(phone) {
   const users = readUsers();
 
@@ -12,24 +25,25 @@ function startRegistration(phone) {
 
   return {
     alreadyRegistered: false,
-    message: 'Welcome! To register, reply with: NAME Grade Subjects. Example: Alice Grade6 MATH,ENG'
+    message: 'Welcome! To register, reply with: NAME Grade Subject(s). Example: Alice Grade6 Mathematics,English\n\nAvailable subjects: ' + AVAILABLE_SUBJECTS.join(', ')
   };
 }
 
 function completeRegistration(phone, text) {
   const parts = text.split(/\s+/);
   if (parts.length < 2) {
-    return { error: 'Invalid format. Example: Alice Grade6 MATH,ENG' };
+    return { error: 'Invalid format. Example: Alice Grade6 Mathematics,English' };
   }
 
   const name = parts.shift();
   let grade = parts.shift();
 
-  // normalize grade (ensure space after "Grade")
+  // normalize grade
   if (/^Grade\d+$/i.test(grade)) {
     grade = grade.replace(/^Grade(\d+)/i, 'Grade $1');
   }
 
+  // subjects
   const subjects = parts.join(' ').split(/[,;\s]+/).filter(Boolean);
 
   const users = readUsers();
@@ -57,5 +71,6 @@ function completeRegistration(phone, text) {
 
 module.exports = {
   startRegistration,
-  completeRegistration
+  completeRegistration,
+  AVAILABLE_SUBJECTS
 };

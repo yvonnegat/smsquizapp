@@ -2,38 +2,50 @@
   "+254745362111": {
     "phone": "+254745362111",
     "name": "Alice",
-    "grade": "Grade6",
-    "subjects": [
-      "MATH"
-    ],
-    "registeredAt": "2025-09-23T08:40:33.686Z",
-    "points": 0,
-    "state": "playing",
-    "lastQuestion": null,
-    "lastIndex": -1
-  },
-  "+254120000000": {
-    "phone": "+254120000000",
-    "name": "Alice",
     "grade": "Grade 6",
     "subjects": [
-      "MATH"
+      "Mathematics",
+      "English"
     ],
-    "registeredAt": "2025-09-23T08:42:16.735Z",
-    "points": 10,
+    "registeredAt": "2025-09-23T09:02:14.397Z",
+    "points": 30,
     "state": "playing",
     "lastQuestion": {
       "grade": "Grade 6",
-      "subject": "Math",
-      "question": "A bag contains 5 red balls and 3 blue balls. What is the probability of picking a blue ball?",
+      "subject": "English",
+      "question": "Fill in the blank: 'She ___ to school every day.'",
       "options": [
-        "A) 1/8",
-        "B) 1/3",
-        "C) 3/8",
-        "D) 2/3"
+        "A) Go",
+        "B) Goes",
+        "C) Went",
+        "D) Going"
       ],
-      "answer": "C"
+      "answer": "B"
     },
-    "lastIndex": 2
+    "lastIndex": 4
+  },
+  "+254120000000": {
+    "phone": "+254120000000",
+    "name": "Yvonne",
+    "grade": "Grade 10",
+    "subjects": [
+      "Science"
+    ],
+    "registeredAt": "2025-09-23T09:09:05.591Z",
+    "points": 40,
+    "state": "playing",
+    "lastQuestion": {
+      "grade": "Grade 10",
+      "subject": "Science",
+      "question": "Which element has the atomic number 6?",
+      "options": [
+        "A) Carbon",
+        "B) Oxygen",
+        "C) Nitrogen",
+        "D) Hydrogen"
+      ],
+      "answer": "A"
+    },
+    "lastIndex": 4
   }
 }

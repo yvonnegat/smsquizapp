@@ -1,4 +1,6 @@
 require('dotenv').config();
+console.log('[DEBUG] AT_USERNAME =', process.env.AT_USERNAME);
+console.log('[DEBUG] AT_API_KEY starts with =', process.env.AT_API_KEY?.slice(0,10));
 const express = require('express');
 const bodyParser = require('body-parser');
 

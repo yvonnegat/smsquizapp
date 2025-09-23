@@ -4,6 +4,7 @@ const router = express.Router();
 const sendSms = require('../helpers/sms');
 const { readUsers } = require('../helpers/storage');
 const { startRegistration, completeRegistration } = require('../services/registration');
+const { getFirstQuestion } = require('../services/quiz');
 
 router.post('/incoming', async (req, res) => {
   res.status(200).send(''); // ack quickly
@@ -26,7 +27,12 @@ router.post('/incoming', async (req, res) => {
     if (result.error) {
       await sendSms(from, result.error);
     } else {
+      // 1️⃣ send confirmation
       await sendSms(from, result.success);
+
+      // 2️⃣ send first question (separately)
+      const question = getFirstQuestion(result.grade);
+      await sendSms(from, question);
     }
     return;
   }

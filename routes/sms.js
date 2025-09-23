@@ -4,7 +4,7 @@ const router = express.Router();
 const sendSms = require('../helpers/sms');
 const { readUsers } = require('../helpers/storage');
 const { startRegistration, completeRegistration } = require('../services/registration');
-const { getFirstQuestion } = require('../services/quiz');
+const { getNextQuestion, checkAnswer } = require('../services/quiz');
 
 router.post('/incoming', async (req, res) => {
   res.status(200).send(''); // ack quickly
@@ -16,9 +16,22 @@ router.post('/incoming', async (req, res) => {
   const users = readUsers();
   const user = users[from];
 
+  // --- REGISTRATION FLOW ---
   if (/^JOIN$/i.test(text)) {
-    const msg = startRegistration(from);
-    await sendSms(from, msg);
+    const result = startRegistration(from);
+
+    if (result.alreadyRegistered) {
+      await sendSms(from, result.message);
+
+      // send next question immediately
+      const nextQ = getNextQuestion(from);
+      if (nextQ && !nextQ.finished) {
+        await sendSms(from, nextQ.text);
+      }
+      return;
+    }
+
+    await sendSms(from, result.message);
     return;
   }
 
@@ -27,17 +40,36 @@ router.post('/incoming', async (req, res) => {
     if (result.error) {
       await sendSms(from, result.error);
     } else {
-      // 1️⃣ send confirmation
+      // ✅ confirmation SMS
       await sendSms(from, result.success);
 
-      // 2️⃣ send first question (separately)
-      const question = getFirstQuestion(result.grade);
-      await sendSms(from, question);
+      // ✅ send first question right after registration
+      const nextQ = getNextQuestion(from);
+      if (nextQ && !nextQ.finished) {
+        await sendSms(from, nextQ.text);
+      }
     }
     return;
   }
 
-  await sendSms(from, 'Send JOIN to register.');
+  // --- ANSWER FLOW ---
+  if (user && user.state === 'playing' && /^[A-D]$/i.test(text)) {
+    const result = checkAnswer(from, text);
+    await sendSms(from, result.message);
+
+    // schedule next question
+    setTimeout(async () => {
+      const nextQ = getNextQuestion(from);
+      if (nextQ && !nextQ.finished) {
+        await sendSms(from, nextQ.text);
+      }
+    }, 60 * 1000); // 1 min for testing (use 24h in prod)
+
+    return;
+  }
+
+  // fallback
+  await sendSms(from, 'Send JOIN to register or answer with A, B, C, or D.');
 });
 
 module.exports = router;

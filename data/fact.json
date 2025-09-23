@@ -1,0 +1,172 @@
+{
+  "Mathematics": {
+    "Grade6": [
+      "The number zero was first used in India more than 1,500 years ago.",
+      "A triangle’s angles always add up to 180 degrees.",
+      "The word 'hundred' comes from the old Norse word 'hundrath' which means 120, not 100."
+    ],
+    "Grade8": [
+      "The Pythagorean theorem shows the relationship between the sides of a right-angled triangle.",
+      "A prime number is a number greater than 1 with only two factors: 1 and itself.",
+      "The number π (pi) is irrational, meaning it goes on forever without repeating."
+    ],
+    "Grade10": [
+      "Algebra allows us to use letters to represent unknown numbers and solve problems.",
+      "Probability theory helps us predict how likely an event is to happen.",
+      "The Fibonacci sequence appears in nature, such as the arrangement of sunflower seeds."
+    ]
+  },
+  "Science": {
+    "Grade6": [
+      "Bananas are berries, but strawberries are not.",
+      "The Earth orbits the sun once every 365 days.",
+      "Your body is made up of about 70% water."
+    ],
+    "Grade8": [
+      "Photosynthesis is the process plants use to make food from sunlight.",
+      "The human skeleton has 206 bones.",
+      "Sound travels faster in water than in air."
+    ],
+    "Grade10": [
+      "Atoms are the building blocks of matter, made of protons, neutrons, and electrons.",
+      "Newton’s three laws explain the motion of objects in the universe.",
+      "DNA carries genetic instructions used in growth, development, and reproduction."
+    ]
+  },
+  "English": {
+    "Grade6": [
+      "The English alphabet has 26 letters but over 40 distinct sounds.",
+      "The longest word in English without a vowel is 'rhythm'.",
+      "The word 'alphabet' comes from the first two Greek letters, alpha and beta."
+    ],
+    "Grade8": [
+      "William Shakespeare invented over 1,700 words we use today.",
+      "An adjective describes a noun, while an adverb describes a verb.",
+      "The Oxford English Dictionary is one of the largest dictionaries in the world."
+    ],
+    "Grade10": [
+      "A metaphor compares two things without using 'like' or 'as'.",
+      "English is spoken by over 1.5 billion people worldwide.",
+      "Literary devices such as irony, symbolism, and foreshadowing add depth to stories."
+    ]
+  },
+  "Kiswahili": {
+    "Grade6": [
+      "Neno la Kiswahili 'rafiki' lina maana ya rafiki au mwenzako.",
+      "Herufi ya Kiswahili hutamkwa vile vile kila wakati.",
+      "Kiswahili ni lugha ya taifa ya Kenya na Tanzania."
+    ],
+    "Grade8": [
+      "Methali ni semi fupi zenye maana ya mafundisho.",
+      "Kitenzi ndicho moyo wa sentensi katika Kiswahili.",
+      "Kiswahili kina maneno yaliyoazimwa kutoka Kiarabu, Kihindi, na Kiingereza."
+    ],
+    "Grade10": [
+      "Ngeli ya Kiswahili ni makundi ya majina yanayofanana kimatamshi na kimaana.",
+      "Mashairi ya Kiswahili hutumia vina na mizani ili kutoa ufanisi wa sauti.",
+      "Kiswahili kina sarufi tajiri inayofanya sentensi kuwa na maana kamili."
+    ]
+  },
+  "Social Studies": {
+    "Grade6": [
+      "Kenya gained independence in 1963.",
+      "Mount Kenya is the second highest mountain in Africa.",
+      "The Nile is the longest river in the world."
+    ],
+    "Grade8": [
+      "The Great Rift Valley stretches from Lebanon to Mozambique.",
+      "The African Union (AU) promotes unity among African countries.",
+      "The Equator passes through Kenya, Uganda, and several other countries."
+    ],
+    "Grade10": [
+      "Democracy is a system of government where citizens vote to choose leaders.",
+      "Colonialism had lasting impacts on African economies and cultures.",
+      "The United Nations was founded in 1945 after World War II."
+    ]
+  },
+  "ICT": {
+    "Grade6": [
+      "ICT stands for Information and Communication Technology.",
+      "The first computers were as big as entire rooms.",
+      "The mouse was invented in 1964 by Douglas Engelbart."
+    ],
+    "Grade8": [
+      "Binary numbers are made of only 0s and 1s.",
+      "The internet is a global network that connects millions of devices.",
+      "Email was one of the first widely used internet services."
+    ],
+    "Grade10": [
+      "Artificial Intelligence (AI) is the simulation of human intelligence in machines.",
+      "Cybersecurity protects data and systems from digital attacks.",
+      "Programming languages like Python, Java, and C++ are used to create software."
+    ]
+  },
+  "Arts & Design": {
+    "Grade6": [
+      "Primary colors are red, blue, and yellow.",
+      "Drawing helps to improve observation and creativity.",
+      "Patterns are repeated designs used in art."
+    ],
+    "Grade8": [
+      "Perspective in drawing creates the illusion of depth on flat surfaces.",
+      "Warm colors include red, orange, and yellow.",
+      "Sculpture is the art of making three-dimensional objects."
+    ],
+    "Grade10": [
+      "Abstract art uses shapes and colors to express ideas rather than reality.",
+      "Design principles include balance, contrast, and unity.",
+      "Graphic design combines art and technology for communication."
+    ]
+  },
+  "Business Studies": {
+    "Grade6": [
+      "Money is a medium of exchange used to buy goods and services.",
+      "A market is a place where buyers and sellers meet.",
+      "A need is something essential for survival, like food and water."
+    ],
+    "Grade8": [
+      "Profit is the difference between revenue and expenses.",
+      "An entrepreneur is a person who starts and manages a business.",
+      "A budget helps plan how to spend and save money."
+    ],
+    "Grade10": [
+      "Marketing involves promoting and selling products to customers.",
+      "Supply and demand influence the prices of goods in a market.",
+      "Inflation is the rise in the general price level of goods and services."
+    ]
+  },
+  "Agriculture": {
+    "Grade6": [
+      "Plants need water, sunlight, and nutrients to grow.",
+      "Farmers use compost to improve soil fertility.",
+      "Maize is one of the main staple crops in Kenya."
+    ],
+    "Grade8": [
+      "Crop rotation helps to maintain soil fertility.",
+      "Livestock provide food, labor, and income for families.",
+      "Irrigation allows farming in dry areas."
+    ],
+    "Grade10": [
+      "Organic farming avoids the use of synthetic fertilizers and pesticides.",
+      "Agroforestry combines trees with crops or livestock farming.",
+      "Soil erosion can reduce agricultural productivity if not controlled."
+    ]
+  },
+  "Life Skills / Health Education": {
+    "Grade6": [
+      "Washing hands with soap helps prevent diseases.",
+      "Respecting others builds good friendships.",
+      "Exercise keeps your body healthy and strong."
+    ],
+    "Grade8": [
+      "Peer pressure can influence both positive and negative behaviors.",
+      "Good communication skills are important in everyday life.",
+      "Balanced diets provide the nutrients the body needs."
+    ],
+    "Grade10": [
+      "Mental health is as important as physical health.",
+      "Time management helps achieve goals effectively.",
+      "Decision-making skills help in solving life challenges."
+    ]
+  }
+}

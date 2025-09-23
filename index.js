@@ -2,6 +2,7 @@ require('dotenv').config();
 console.log('[DEBUG] AT_USERNAME =', process.env.AT_USERNAME);
 console.log('[DEBUG] AT_API_KEY starts with =', process.env.AT_API_KEY?.slice(0,10));
 const express = require('express');
+const scheduleDailyFacts = require('./scheduler/dailyFacts');
 const bodyParser = require('body-parser');
 
 const smsRoutes = require('./routes/sms');
@@ -17,5 +18,6 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => res.send('Hello, SMS Quiz!'));
 app.use('/sms', smsRoutes);
 app.use('/admin', adminRoutes);
+scheduleDailyFacts();
 
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));

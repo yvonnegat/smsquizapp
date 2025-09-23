@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const sendSms = require('../helpers/sms');
+const { getRandomFact } = require('../helpers/facts');
 const { readUsers } = require('../helpers/storage');
 const { startRegistration, completeRegistration } = require('../services/registration');
 const { getNextQuestion, checkAnswer } = require('../services/quiz');
@@ -99,6 +100,27 @@ router.post('/incoming', async (req, res) => {
 
   // fallback
   await sendSms(from, 'Send JOIN to register or answer with A, B, C, or D.');
+});
+
+router.get('/send-facts', async (req, res) => {
+  const users = readUsers();
+
+  for (const phone in users) {
+    const user = users[phone];
+    if (!user || !user.subjects || !user.grade) continue;
+
+    const subject = user.subjects[Math.floor(Math.random() * user.subjects.length)];
+    const grade = `Grade${user.grade}`;
+    const fact = getRandomFact(subject, grade);
+
+    if (fact) {
+      const message = `📘 Daily Fact (${subject}, ${grade}):\n${fact}`;
+      await sendSms(phone, message);
+      console.log(`✅ Sent fact to ${phone}`);
+    }
+  }
+
+  res.send("✅ Facts sent successfully!");
 });
 
 module.exports = router;

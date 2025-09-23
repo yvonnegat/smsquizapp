@@ -39,5 +39,20 @@
       "ENG"
     ],
     "registeredAt": "2025-09-22T20:06:17.285Z"
+  },
+  "+254120000000": {
+    "phone": "+254120000000",
+    "state": "awaiting_details"
+  },
+  "+254732323266": {
+    "phone": "+254732323266",
+    "name": "Alice",
+    "grade": "Grade8",
+    "subjects": [
+      "MATH",
+      "ENG",
+      "PHY"
+    ],
+    "registeredAt": "2025-09-23T07:57:51.155Z"
   }
 }

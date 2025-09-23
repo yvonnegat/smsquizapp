@@ -17,3 +17,5 @@ module.exports = {
   readUsers,
   saveUsers
 };
+
+console.log('[DEBUG] helpers/storage.js exports:', module.exports);

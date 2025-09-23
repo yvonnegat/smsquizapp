@@ -17,7 +17,7 @@ router.post('/incoming', async (req, res) => {
   const users = readUsers();
   const user = users[from];
 
-  // --- LEADERBOARD / SCORE ---
+    // --- LEADERBOARD / SCORE ---
   if (/^(SCORE|RANK)$/i.test(text)) {
     const rankInfo = getUserRank(from);
     if (!rankInfo) {
@@ -33,8 +33,17 @@ router.post('/incoming', async (req, res) => {
 
     msg += `\nYour Rank: ${rankInfo.rank}/${rankInfo.total} (${rankInfo.user.points} pts)`;
     await sendSms(from, msg);
+
+    // ✅ also check if they are due for next question
+    if (user && user.state === 'playing') {
+      const nextQ = getNextQuestion(from);
+      if (nextQ && !nextQ.finished) {
+        await sendSms(from, `\nHere’s your next question:\n\n${nextQ.text}`);
+      }
+    }
     return;
   }
+
 
   // --- REGISTRATION FLOW ---
   if (/^JOIN$/i.test(text)) {

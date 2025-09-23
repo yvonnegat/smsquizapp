@@ -25,7 +25,10 @@ function startRegistration(phone) {
 
   return {
     alreadyRegistered: false,
-    message: 'Welcome! To register, reply with: NAME Grade Subject(s). Example: Alice Grade6 Mathematics,English\n\nAvailable subjects: ' + AVAILABLE_SUBJECTS.join(', ')
+    message:
+      'Welcome! To register, reply with: NAME Grade Subject(s).\n' +
+      'Example: Alice Grade6 Mathematics,English\n\n' +
+      'Available subjects: ' + AVAILABLE_SUBJECTS.join(', ')
   };
 }
 
@@ -43,8 +46,9 @@ function completeRegistration(phone, text) {
     grade = grade.replace(/^Grade(\d+)/i, 'Grade $1');
   }
 
-  // subjects
-  const subjects = parts.join(' ').split(/[,;\s]+/).filter(Boolean);
+  // subjects: join remaining text, then split ONLY by commas/semicolons
+  const subjectsRaw = parts.join(' ').trim();
+  const subjects = subjectsRaw.split(/[,;]+/).map(s => s.trim()).filter(Boolean);
 
   const users = readUsers();
 

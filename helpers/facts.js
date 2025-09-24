@@ -14,6 +14,8 @@ function getRandomFact(subject, grade) {
   const subjectFacts = facts[subject]?.[grade];
   if (!subjectFacts || subjectFacts.length === 0) return null;
   const randomIndex = Math.floor(Math.random() * subjectFacts.length);
+  console.log(`🔍 Looking for subject=${normalizedSubject}, grade=${grade}`);
+
   return subjectFacts[randomIndex];
 }
 

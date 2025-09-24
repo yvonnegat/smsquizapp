@@ -6,7 +6,7 @@ const { getRandomFact } = require('../helpers/facts');
 let jobRunning = false;
 
 function scheduleDailyFacts() {
-  cron.schedule('* * * * *', async () => {
+  cron.schedule('* 9 * * *', async () => {
     if (jobRunning) {
       console.warn('⏱ Previous job still running, skipping this minute.');
       return;

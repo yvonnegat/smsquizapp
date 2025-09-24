@@ -91,12 +91,12 @@ router.post('/incoming', async (req, res) => {
     await sendSms(from, msg);
 
     // ✅ also check if they are due for next question
-    if (user && user.state === 'playing') {
-      const nextQ = getNextQuestion(from);
-      if (nextQ && !nextQ.finished) {
-        await sendSms(from, `\nHere’s your next question:\n\n${nextQ.text}`);
-      }
-    }
+    // if (user && user.state === 'playing') {
+    //   const nextQ = getNextQuestion(from);
+    //   if (nextQ && !nextQ.finished) {
+    //     await sendSms(from, `\nHere’s your next question:\n\n${nextQ.text}`);
+    //   }
+    // }
     return;
   }
 

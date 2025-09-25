@@ -18,23 +18,24 @@ router.post('/incoming', async (req, res) => {
   const users = readUsers();
   const user = users[from];
 
-  // --- STOP FLOW ---
-  if (/^STOP$/i.test(text)) {
-    if (user) {
-      user.state = 'stopped';
-      saveUsers(users);
-      await sendSms(from, '✅ You have unsubscribed from EduQuiz. Send JOIN anytime to start again.');
-    } else {
-      await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
-    }
-    return;
+ // --- STOP FLOW ---
+if (/^STOP$/i.test(text)) {
+  if (user) {
+    delete users[from]; // 🚨 Remove the user completely
+    saveUsers(users);   // Save changes to users.json
+    await sendSms(from, '✅ You have unsubscribed from EduQuiz. All your data has been deleted. Send JOIN anytime to start fresh.');
+  } else {
+    await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
   }
+  return;
+}
 
-  // If user is stopped, ignore everything except JOIN
-  if (user && user.state === 'stopped' && !/^JOIN$/i.test(text)) {
-    await sendSms(from, 'You have unsubscribed. Send JOIN to register again.');
-    return;
-  }
+// If user is deleted (not found in users.json), treat them as unregistered
+if (!user && !/^JOIN$/i.test(text)) {
+  await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
+  return;
+}
+
 
   // --- LEADERBOARD / SCORE ---
   if (/^(SCORE|RANK)$/i.test(text)) {

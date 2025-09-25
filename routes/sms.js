@@ -9,7 +9,7 @@ const { getNextQuestion, checkAnswer } = require('../services/quiz');
 const { getLeaderboard, getUserRank } = require('../services/leaderboard');
 
 router.post('/incoming', async (req, res) => {
-  res.status(200).send(''); // ack quickly
+  res.status(200).send(''); 
 
   const from = req.body.from;
   const text = (req.body.text || '').trim();
@@ -46,41 +46,25 @@ router.post('/incoming', async (req, res) => {
   }
 
 
-  // --- REGISTRATION FLOW ---
-  if (/^JOIN$/i.test(text)) {
-    const result = startRegistration(from);
+ // --- REGISTRATION FLOW ---
+if (/^JOIN$/i.test(text)) {
+  const result = startRegistration(from);
 
-    if (result.alreadyRegistered) {
-      await sendSms(from, result.message);
-
-      // send next question immediately
-      const nextQ = getNextQuestion(from);
-      if (nextQ && !nextQ.finished) {
-        await sendSms(from, nextQ.text);
-      }
-      return;
-    }
-
+  if (result.alreadyRegistered) {
     await sendSms(from, result.message);
-    return;
+    return; // ✅ no extra question
   }
 
-  if (user && user.state === 'awaiting_details') {
-    const result = completeRegistration(from, text);
-    if (result.error) {
-      await sendSms(from, result.error);
-    } else {
-      // ✅ confirmation SMS
-      await sendSms(from, result.success);
+  await sendSms(from, result.message);
 
-      // ✅ send first question right after registration
-      const nextQ = getNextQuestion(from);
-      if (nextQ && !nextQ.finished) {
-        await sendSms(from, nextQ.text);
-      }
-    }
-    return;
+  // if first-time registration, send first question right away
+  const nextQ = getNextQuestion(from);
+  if (nextQ && !nextQ.finished) {
+    await sendSms(from, nextQ.text);
   }
+  return;
+}
+
 
   // --- ANSWER FLOW ---
   if (user && user.state === 'playing' && /^[A-D]$/i.test(text)) {

@@ -7,6 +7,7 @@ const { readUsers } = require('../helpers/storage');
 const { startRegistration, completeRegistration } = require('../services/registration');
 const { getNextQuestion, checkAnswer } = require('../services/quiz');
 const { getLeaderboard, getUserRank } = require('../services/leaderboard');
+const { checkRedeemEligibility, redeemPoints } = require('../services/rewards');
 
 router.post('/incoming', async (req, res) => {
   res.status(200).send(''); // ack quickly
@@ -18,34 +19,6 @@ router.post('/incoming', async (req, res) => {
   const users = readUsers();
   const user = users[from];
 
-    // --- LEADERBOARD / SCORE ---
-  if (/^(SCORE|RANK)$/i.test(text)) {
-    const rankInfo = getUserRank(from);
-    if (!rankInfo) {
-      await sendSms(from, 'You are not registered. Send JOIN to start.');
-      return;
-    }
-
-    const leaderboard = getLeaderboard(5);
-    let msg = `🏆 Leaderboard:\n`;
-    leaderboard.forEach((u, i) => {
-      msg += `${i + 1}. ${u.name} - ${u.points || 0} pts\n`;
-    });
-
-    msg += `\nYour Rank: ${rankInfo.rank}/${rankInfo.total} (${rankInfo.user.points} pts)`;
-    await sendSms(from, msg);
-
-    // ✅ also check if they are due for next question
-    if (user && user.state === 'playing') {
-      const nextQ = getNextQuestion(from);
-      if (nextQ && !nextQ.finished) {
-        await sendSms(from, `\nHere’s your next question:\n\n${nextQ.text}`);
-      }
-    }
-    return;
-  }
-
-
   // --- REGISTRATION FLOW ---
   if (/^JOIN$/i.test(text)) {
     const result = startRegistration(from);
@@ -56,6 +29,7 @@ router.post('/incoming', async (req, res) => {
       // send next question immediately
       const nextQ = getNextQuestion(from);
       if (nextQ && !nextQ.finished) {
+        console.log('[DEBUG] Sending Next question to existing user ', from);
         await sendSms(from, nextQ.text);
       }
       return;
@@ -72,10 +46,12 @@ router.post('/incoming', async (req, res) => {
     } else {
       // ✅ confirmation SMS
       await sendSms(from, result.success);
+      console.log('[DEBUG] Completing registration for', from);
 
       // ✅ send first question right after registration
       const nextQ = getNextQuestion(from);
       if (nextQ && !nextQ.finished) {
+        console.log('[DEBUG] Sending first question to', from);
         await sendSms(from, nextQ.text);
       }
     }
@@ -98,8 +74,42 @@ router.post('/incoming', async (req, res) => {
     return;
   }
 
+    // --- LEADERBOARD / SCORE ---
+  if (/^(SCORE|RANK)$/i.test(text)) {
+    const rankInfo = getUserRank(from);
+    if (!rankInfo) {
+      await sendSms(from, 'You are not registered. Send JOIN to start.');
+      return;
+    }
+
+    const leaderboard = getLeaderboard(5);
+    let msg = `🏆 Leaderboard:\n`;
+    leaderboard.forEach((u, i) => {
+      msg += `${i + 1}. ${u.name} - ${u.points || 0} pts\n`;
+    });
+
+    msg += `\nYour Rank: ${rankInfo.rank}/${rankInfo.total} (${rankInfo.user.points} pts)`;
+    await sendSms(from, msg);
+
+    // ✅ also check if they are due for next question
+    // if (user && user.state === 'playing') {
+    //   const nextQ = getNextQuestion(from);
+    //   if (nextQ && !nextQ.finished) {
+    //     await sendSms(from, `\nHere’s your next question:\n\n${nextQ.text}`);
+    //   }
+    // }
+    return;
+  }
+
+  // --- REDEEM ---
+  if (/^REDEEM$/i.test(text)) {
+    const msg = await redeemPoints(from);
+    await sendSms(from, msg);
+    return;
+  }
+
   // fallback
-  await sendSms(from, 'Send JOIN to register or answer with A, B, C, or D.');
+  await sendSms(from, 'Send JOIN to register, SCORE to view leaderboard, REDEEM to claim airtime, or answer with A, B, C, or D.');
 });
 
 router.get('/send-facts', async (req, res) => {

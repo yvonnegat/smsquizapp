@@ -4,52 +4,24 @@
     "name": "Alice",
     "grade": "Grade 6",
     "subjects": [
-      "Mathematics",
-      "English"
+      "Mathematics"
     ],
-    "registeredAt": "2025-09-23T09:02:14.397Z",
-    "points": 30,
+    "registeredAt": "2025-09-23T18:11:06.723Z",
+    "points": 50,
     "state": "playing",
     "lastQuestion": {
       "grade": "Grade 6",
-      "subject": "English",
-      "question": "Fill in the blank: 'She ___ to school every day.'",
+      "subject": "Math",
+      "question": "A class has 30 students. 1/3 play football, 1/5 play basketball. How many play neither?",
       "options": [
-        "A) Go",
-        "B) Goes",
-        "C) Went",
-        "D) Going"
+        "A) 12",
+        "B) 18",
+        "C) 20",
+        "D) 22"
       ],
       "answer": "B"
     },
-    "lastIndex": 4
-  },
-  "+254120000000": {
-    "phone": "+254120000000",
-    "name": "Yvonne",
-    "grade": "Grade 10",
-    "subjects": [
-      "Science"
-    ],
-    "registeredAt": "2025-09-23T09:09:05.591Z",
-    "points": 40,
-    "state": "playing",
-    "lastQuestion": {
-      "grade": "Grade 10",
-      "subject": "Science",
-      "question": "Which element has the atomic number 6?",
-      "options": [
-        "A) Carbon",
-        "B) Oxygen",
-        "C) Nitrogen",
-        "D) Hydrogen"
-      ],
-      "answer": "A"
-    },
-    "lastIndex": 4
-  },
-  "+254793897758": {
-    "phone": "+254793897758",
-    "state": "awaiting_details"
+    "lastIndex": 4,
+    "redeemed": false
   }
 }

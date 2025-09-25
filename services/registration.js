@@ -1,7 +1,7 @@
 const { readUsers, saveUsers } = require('../helpers/storage');
 
 const AVAILABLE_SUBJECTS = [
-  "Mathematics",
+  "Math",
   "Science",
   "English",
   "Kiswahili",
@@ -27,7 +27,7 @@ function startRegistration(phone) {
     alreadyRegistered: false,
     message:
       'Welcome! To register, reply with: NAME Grade Subject(s).\n' +
-      'Example: Alice Grade6 Mathematics,English\n\n' +
+      'Example: Alice Grade6 Math,English\n\n' +
       'Available subjects: ' + AVAILABLE_SUBJECTS.join(', ')
   };
 }

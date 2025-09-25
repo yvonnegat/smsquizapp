@@ -114,7 +114,7 @@ router.post('/incoming', async (req, res) => {
       if (nextQ && !nextQ.finished) {
         await sendSms(from, nextQ.text);
       }
-    }, 60 * 1000); // 1 min for testing (24h in production)
+    }, 30 * 1000); // 1 min for testing (24h in production)
 
     return;
   }

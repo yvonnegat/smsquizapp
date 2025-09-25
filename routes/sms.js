@@ -3,13 +3,13 @@ const router = express.Router();
 
 const sendSms = require('../helpers/sms');
 const { getRandomFact } = require('../helpers/facts');
-const { readUsers } = require('../helpers/storage');
+const { readUsers, saveUsers } = require('../helpers/storage');
 const { startRegistration, completeRegistration } = require('../services/registration');
 const { getNextQuestion, checkAnswer } = require('../services/quiz');
 const { getLeaderboard, getUserRank } = require('../services/leaderboard');
 
 router.post('/incoming', async (req, res) => {
-  res.status(200).send(''); 
+  res.status(200).send('');
 
   const from = req.body.from;
   const text = (req.body.text || '').trim();
@@ -18,11 +18,29 @@ router.post('/incoming', async (req, res) => {
   const users = readUsers();
   const user = users[from];
 
-    // --- LEADERBOARD / SCORE ---
+  // --- STOP FLOW ---
+  if (/^STOP$/i.test(text)) {
+    if (user) {
+      user.state = 'stopped';
+      saveUsers(users);
+      await sendSms(from, '✅ You have unsubscribed from EduQuiz. Send JOIN anytime to start again.');
+    } else {
+      await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
+    }
+    return;
+  }
+
+  // If user is stopped, ignore everything except JOIN
+  if (user && user.state === 'stopped' && !/^JOIN$/i.test(text)) {
+    await sendSms(from, 'You have unsubscribed. Send JOIN to register again.');
+    return;
+  }
+
+  // --- LEADERBOARD / SCORE ---
   if (/^(SCORE|RANK)$/i.test(text)) {
     const rankInfo = getUserRank(from);
     if (!rankInfo) {
-      await sendSms(from, 'You are not registered. Send JOIN to start.');
+      await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
       return;
     }
 
@@ -45,9 +63,15 @@ router.post('/incoming', async (req, res) => {
     return;
   }
 
-
   // --- REGISTRATION FLOW ---
   if (/^JOIN$/i.test(text)) {
+    if (user && user.state === 'stopped') {
+      user.state = 'awaiting_details';
+      saveUsers(users);
+      await sendSms(from, '👋 Welcome back! Please register again with: NAME Grade Subjects');
+      return;
+    }
+
     const result = startRegistration(from);
 
     if (result.alreadyRegistered) {
@@ -99,7 +123,7 @@ router.post('/incoming', async (req, res) => {
   }
 
   // fallback
-  await sendSms(from, 'Send JOIN to register or answer with A, B, C, or D.');
+  await sendSms(from, 'ℹ️ Send JOIN to register or answer with A, B, C, or D.');
 });
 
 router.get('/send-facts', async (req, res) => {
@@ -108,6 +132,7 @@ router.get('/send-facts', async (req, res) => {
   for (const phone in users) {
     const user = users[phone];
     if (!user || !user.subjects || !user.grade) continue;
+    if (user.state === 'stopped') continue; // skip unsubscribed users
 
     const subject = user.subjects[Math.floor(Math.random() * user.subjects.length)];
     const grade = `Grade${user.grade}`;

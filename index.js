@@ -12,7 +12,7 @@ const adminRoutes = require('./routes/admin');
 setInterval(() => {
   console.log('[DEBUG] Broadcasting fact to users');
   broadcastFact();
-}, 60 * 1000);
+}, 120 * 1000);
 
 const app = express();
 const PORT = process.env.PORT || 3000;

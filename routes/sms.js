@@ -47,24 +47,40 @@ router.post('/incoming', async (req, res) => {
 
 
   // --- REGISTRATION FLOW ---
-if (/^JOIN$/i.test(text)) {
-  if (user) {
-    // User already exists in DB
-    await sendSms(from, "You are already registered!");
+  if (/^JOIN$/i.test(text)) {
+    const result = startRegistration(from);
+
+    if (result.alreadyRegistered) {
+      await sendSms(from, result.message);
+
+      // send next question immediately
+      const nextQ = getNextQuestion(from);
+      if (nextQ && !nextQ.finished) {
+        await sendSms(from, nextQ.text);
+      }
+      return;
+    }
+
+    await sendSms(from, result.message);
     return;
   }
 
-  // Otherwise, start registration
-  const result = startRegistration(from);
-  await sendSms(from, result.message);
+  if (user && user.state === 'awaiting_details') {
+    const result = completeRegistration(from, text);
+    if (result.error) {
+      await sendSms(from, result.error);
+    } else {
+      // ✅ confirmation SMS
+      await sendSms(from, result.success);
 
-  // Send first question only for new users
-  const nextQ = getNextQuestion(from);
-  if (nextQ && !nextQ.finished) {
-    await sendSms(from, nextQ.text);
+      // ✅ send first question right after registration
+      const nextQ = getNextQuestion(from);
+      if (nextQ && !nextQ.finished) {
+        await sendSms(from, nextQ.text);
+      }
+    }
+    return;
   }
-  return;
-}
 
   // --- ANSWER FLOW ---
   if (user && user.state === 'playing' && /^[A-D]$/i.test(text)) {

@@ -26,16 +26,17 @@ function startRegistration(phone) {
   return {
     alreadyRegistered: false,
     message: 
-  "🎓 Welcome to EduQuiz – the SMS Learning Challenge!\n\n" +
-  "To get started, register with: NAME Grade Subjects\n" +
-  "👉 Example: Alice Grade6 Math,English,Science\n\n" +
-  "📚 Available subjects: " + AVAILABLE_SUBJECTS.join(', ') + "\n\n" +
-  "✨ Extra Commands:\n" +
-  "- Send RANK to see your position on the leaderboard.\n" +
-  "- Send REDEEM to exchange your points for airtime rewards.\n\n" +
-  "Ready to learn & win? Reply now to join the quiz! 🚀"
-
+      "🎓 Welcome to EduQuiz – the SMS Learning Challenge!\n\n" +
+      "To get started, register with: NAME Grade Subjects\n" +
+      "👉 Example: Alice Grade6 Math,English,Science\n\n" +
+      "📚 Available subjects: " + AVAILABLE_SUBJECTS.join(', ') + "\n\n" +
+      "✨ Extra Commands:\n" +
+      "- Send RANK to see your position on the leaderboard.\n" +
+      "- Send REDEEM to exchange your points for airtime rewards.\n\n" +
+      "Ready to learn & win? Reply now to join the quiz! 🚀"
+  }; 
 }
+
 
 function completeRegistration(phone, text) {
   const parts = text.split(/\s+/);

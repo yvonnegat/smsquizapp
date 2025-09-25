@@ -18,24 +18,23 @@ router.post('/incoming', async (req, res) => {
   const users = readUsers();
   const user = users[from];
 
- // --- STOP FLOW ---
-if (/^STOP$/i.test(text)) {
-  if (user) {
-    delete users[from]; // 🚨 Remove the user completely
-    saveUsers(users);   // Save changes to users.json
-    await sendSms(from, '✅ You have unsubscribed from EduQuiz. All your data has been deleted. Send JOIN anytime to start fresh.');
-  } else {
-    await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
+  // --- STOP FLOW ---
+  if (/^STOP$/i.test(text)) {
+    if (user) {
+      delete users[from]; // 🚨 Completely remove user from storage
+      saveUsers(users);
+      await sendSms(from, '✅ You have unsubscribed from EduQuiz. All your data has been deleted. Send JOIN anytime to start fresh.');
+    } else {
+      await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
+    }
+    return;
   }
-  return;
-}
 
-// If user is deleted (not found in users.json), treat them as unregistered
-if (!user && !/^JOIN$/i.test(text)) {
-  await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
-  return;
-}
-
+  // --- If user not registered, only allow JOIN ---
+  if (!user && !/^JOIN$/i.test(text)) {
+    await sendSms(from, 'ℹ️ You are not registered. Send JOIN to start.');
+    return;
+  }
 
   // --- LEADERBOARD / SCORE ---
   if (/^(SCORE|RANK)$/i.test(text)) {
@@ -54,7 +53,7 @@ if (!user && !/^JOIN$/i.test(text)) {
     msg += `\nYour Rank: ${rankInfo.rank}/${rankInfo.total} (${rankInfo.user.points} pts)`;
     await sendSms(from, msg);
 
-    // ✅ also check if they are due for next question
+    // ✅ also send next question if due
     if (user && user.state === 'playing') {
       const nextQ = getNextQuestion(from);
       if (nextQ && !nextQ.finished) {
@@ -66,13 +65,6 @@ if (!user && !/^JOIN$/i.test(text)) {
 
   // --- REGISTRATION FLOW ---
   if (/^JOIN$/i.test(text)) {
-    if (user && user.state === 'stopped') {
-      user.state = 'awaiting_details';
-      saveUsers(users);
-      await sendSms(from, '👋 Welcome back! Please register again with: NAME Grade Subjects');
-      return;
-    }
-
     const result = startRegistration(from);
 
     if (result.alreadyRegistered) {
@@ -98,7 +90,7 @@ if (!user && !/^JOIN$/i.test(text)) {
       // ✅ confirmation SMS
       await sendSms(from, result.success);
 
-      // ✅ send first question right after registration
+      // ✅ send first question immediately
       const nextQ = getNextQuestion(from);
       if (nextQ && !nextQ.finished) {
         await sendSms(from, nextQ.text);
@@ -118,7 +110,7 @@ if (!user && !/^JOIN$/i.test(text)) {
       if (nextQ && !nextQ.finished) {
         await sendSms(from, nextQ.text);
       }
-    }, 60 * 1000); // 1 min for testing (use 24h in prod)
+    }, 60 * 1000); // 1 min for testing (24h in production)
 
     return;
   }
@@ -127,13 +119,13 @@ if (!user && !/^JOIN$/i.test(text)) {
   await sendSms(from, 'ℹ️ Send JOIN to register or answer with A, B, C, or D.');
 });
 
+// --- DAILY FACTS ---
 router.get('/send-facts', async (req, res) => {
   const users = readUsers();
 
   for (const phone in users) {
     const user = users[phone];
     if (!user || !user.subjects || !user.grade) continue;
-    if (user.state === 'stopped') continue; // skip unsubscribed users
 
     const subject = user.subjects[Math.floor(Math.random() * user.subjects.length)];
     const grade = `Grade${user.grade}`;

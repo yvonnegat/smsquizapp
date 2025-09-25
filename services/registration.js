@@ -1,7 +1,7 @@
 const { readUsers, saveUsers } = require('../helpers/storage');
 
 const AVAILABLE_SUBJECTS = [
-  "Mathematics",
+  "Math",
   "Science",
   "English",
   "Kiswahili",

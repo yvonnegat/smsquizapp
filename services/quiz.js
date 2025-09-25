@@ -1,7 +1,8 @@
+// services/quiz.js
+
 const path = require('path');
 const fs = require('fs');
 const { readUsers, saveUsers } = require('../helpers/storage');
-const { AVAILABLE_SUBJECTS } = require('./registration');
 
 const QUESTIONS_FILE = path.join(__dirname, '..', 'data', 'questions.json');
 
@@ -11,7 +12,17 @@ function loadQuestions() {
 }
 
 function normalize(str) {
-  return str.toLowerCase().replace(/\s+/g, '');
+  return (str || '').toLowerCase().replace(/\s+/g, '');
+}
+
+// Fisher-Yates shuffle
+function shuffle(array) {
+  const a = array.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 function getNextQuestion(phone) {
@@ -19,40 +30,53 @@ function getNextQuestion(phone) {
   const user = users[phone];
   if (!user) return null;
 
-  const questions = loadQuestions().filter(
-    q =>
-      normalize(q.grade) === normalize(user.grade) &&
-      user.subjects.some(s => normalize(q.subject) === normalize(s))
+  const allQuestions = loadQuestions();
+
+  // Filter by grade AND subject(s)
+  const eligible = allQuestions.filter(q =>
+    normalize(q.grade) === normalize(user.grade)
+    && user.subjects.some(s => normalize(q.subject) === normalize(s))
   );
 
-  if (!questions.length) {
+  if (!eligible.length) {
+    console.log('[DEBUG] No eligible questions for user:', phone, 'grade:', user.grade, 'subjects:', user.subjects);
     return {
       finished: true,
-      text:
-        'Sorry, no more questions found for your chosen subjects.\nAvailable subjects are:\n' +
-        AVAILABLE_SUBJECTS.join(', ')
+      text: 'Sorry, no questions found for your chosen subject(s) and grade. 🎓'
     };
   }
 
-  const nextIndex = user.lastIndex + 1;
-  if (nextIndex >= questions.length) {
+  // Initialize askedQuestions if not there
+  user.askedQuestions = user.askedQuestions || [];
+
+  // Filter out already asked
+  const notAsked = eligible.filter(q => !user.askedQuestions.includes(q.question));
+
+  let nextQ;
+  if (notAsked.length > 0) {
+    // Shuffle notAsked so it's random
+    const shuffled = shuffle(notAsked);
+    nextQ = shuffled[0];
+  } else {
+    // All questions asked, optionally reset or finish
+    // Here we'll treat as finished
     return {
       finished: true,
-      text:
-        '🎉 You have completed all questions for your subject(s).\nAvailable subjects are:\n' +
-        AVAILABLE_SUBJECTS.join(', ')
+      text: '🎉 You have completed all questions for your chosen subject(s).'
     };
   }
 
-  const q = questions[nextIndex];
+  // Mark it as asked
+  user.askedQuestions.push(nextQ.question);
 
-  user.lastQuestion = q;
-  user.lastIndex = nextIndex;
+  // Also update lastQuestion, etc.
+  user.lastQuestion = nextQ;
+  // lastIndex might not matter now, but you could track
   saveUsers(users);
 
-  console.log('[DEBUG] Sending', q.subject, 'question index', nextIndex, 'to', phone);
+  console.log('[DEBUG] Next question chosen for', phone, 'subject:', nextQ.subject);
 
-  return { question: q, text: formatQuestion(q) };
+  return { question: nextQ, text: formatQuestion(nextQ) };
 }
 
 function formatQuestion(q) {
@@ -74,10 +98,7 @@ function checkAnswer(phone, answer) {
     return { correct: true, message: `✅ Correct! You now have ${user.points} points.` };
   } else {
     saveUsers(users);
-    return {
-      correct: false,
-      message: `❌ Wrong. The correct answer was ${user.lastQuestion.answer}. Total points: ${user.points}`
-    };
+    return { correct: false, message: `❌ Wrong. The correct answer was ${user.lastQuestion.answer}. Total points: ${user.points}` };
   }
 }
 
